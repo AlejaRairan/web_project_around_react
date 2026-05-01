@@ -1,0 +1,12 @@
+.header {
+  margin: 20px 100px;
+}
+
+.header__wrapper {
+  border-bottom: 1px solid white;
+}
+
+.header__title {
+  font-size: 40px;
+}
+
