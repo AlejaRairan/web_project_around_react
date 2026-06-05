@@ -1,7 +1,7 @@
 import Popup from "./components/Popup/Popup.jsx";
 import NewCard from "./components/form/NewCard/NewCard.jsx";
-import NewProfile from "./components/form/EditProfile/NewProfile.jsx";
-import NewAvatar from "./components/form/EditAvatar/NewAvatar.jsx";
+import EditProfile from "./components/form/EditProfile/EditProfile.jsx";
+import EditAvatar from "./components/form/EditAvatar/EditAvatar.jsx";
 import avatar from "../../images/JacquesCousteau.png";
 import editIcon from "../../images/editicon.svg";
 import addIcon from "../../images/addicon.svg";
@@ -29,7 +29,7 @@ export default function Main({
       setPopup({
         title: "Editar perfil",
         children: (
-          <NewProfile
+          <EditProfile
             onUpdateUser={handleUpdateUser}
             onClose={handleClosePopup}
           />
@@ -39,7 +39,7 @@ export default function Main({
       setPopup({
         title: "Actualizar avatar",
         children: (
-          <NewAvatar
+          <EditAvatar
             onUpdateAvatar={handleUpdateAvatar}
             onClose={handleClosePopup}
           />

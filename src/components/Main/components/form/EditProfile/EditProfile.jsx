@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
-import CurrentUserContext from "../../../../../contexts/CurrentUserContext.js";
+import CurrentUserContext from "../../../../../contexts/CurrentUserContext.jsx";
 
-export default function NewProfile({ onUpdateUser, onClose }) {
+export default function EditProfile({ onUpdateUser, onClose }) {
   const currentUser = useContext(CurrentUserContext); // Obtiene el objeto currentUser
 
   const [name, setName] = useState(currentUser?.name || "");

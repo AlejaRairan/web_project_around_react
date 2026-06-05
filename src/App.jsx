@@ -58,7 +58,7 @@ const handleAddPlaceSubmit = (name, link) => {
 }, []);
 
 const handleUpdateUser = (data) => {
-  api.createDescription(data)  
+  api.updateUserInfo(data)  
     .then((newData) => {
       setCurrentUser(newData);
     })

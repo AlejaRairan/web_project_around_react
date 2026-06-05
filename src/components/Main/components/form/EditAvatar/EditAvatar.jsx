@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-export default function NewAvatar({ onUpdateAvatar, onClose }) {
+export default function EditAvatar({ onUpdateAvatar, onClose }) {
   const avatarUrlRef = useRef();
   const [urlError, setUrlError] = useState("");
   const [urlValue, setUrlValue] = useState("");
