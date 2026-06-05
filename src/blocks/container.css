@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
   background:none;
-  
+  z-index: 1000;
 }
 
 .container__description {
@@ -72,11 +72,6 @@
 
 .container__avatar:hover::after {
   opacity: 1;
-}
-
-.container__avatar-button {
-  z-index: 1000;
-  
 }
 
 .container__add-button {
@@ -127,9 +122,6 @@
 @media screen and (max-width: 767px) {
   .container {
     margin: 20px;
-  }
-
-  .container {
     padding: 20px 0;
     flex-direction: column;
   }

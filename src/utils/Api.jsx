@@ -21,7 +21,6 @@ class Api {
   }
 
   createDescription({ name, about }) {
-    console.log(name, about);
     return fetch(`${this.url}/users/me`, {
       method: "PATCH",
       headers: {
@@ -86,6 +85,13 @@ class Api {
       return res.json();
     });
   }
+  changeLikeCardStatus(cardId, isLiked) {
+    if (isLiked) {
+      return this.likeCard(cardId);
+    }
+
+    return this.unlikeCard(cardId);
+  }
 
   createCard(name, link) {
     return fetch(`${this.url}/cards`, {
@@ -114,6 +120,7 @@ class Api {
   }
 
   updateUserInfo(avatarUrl) {
+    console.log("enviando al servidor:", JSON.stringify({ avatar: avatarUrl }));
     return fetch(`${this.url}/users/me/avatar`, {
       method: "PATCH",
       headers: {
@@ -134,5 +141,5 @@ class Api {
 
 export const api = new Api(
   "https://around-api.es.tripleten-services.com/v1",
-  "c363e6f6-18e6-4e74-8578-cb86a4b17bc1"
+  "c363e6f6-18e6-4e74-8578-cb86a4b17bc1",
 );

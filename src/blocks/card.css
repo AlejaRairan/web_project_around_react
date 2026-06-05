@@ -12,17 +12,16 @@
   position: relative;
 
 }
-/*.card__container {
+/**.card__container {
   position: relative;
   flex-grow: 1;
   width: 100%;
   height: 400px;
-
   
-}*/ 
+}**/
 .card__image {
   width: 100%;
-  height: 100%;
+  height: 600px;
   object-fit: cover; 
   display: block;
 }
@@ -61,7 +60,7 @@
 .card__like-button:hover {
   opacity: 0.7;
 } 
-.card__like-button-active {
+.card__like-button_is-active {
   background-image: url(../images/Union.png);
   opacity: 1;
 }

@@ -1,8 +1,16 @@
 import close from "../../../../images/closeIcon.svg";
+import { useEffect } from "react";
 
 export default function Popup(props) {
-  //los hijos son el contenido de la ventana emergente
+  
   const { title, children, onClose, isOpen } = props;
+  useEffect(() => {
+    function handleEsc(e) {
+      if (e.key === "Escape") onClose();
+    }
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc); // limpia al desmontar
+  }, [onClose]);
 
   return (
     <div className={`popup ${isOpen ? "popup_opened" : ""}`}>
@@ -19,7 +27,6 @@ export default function Popup(props) {
         {children}
         
       </div>
-      
     </div>
   );
 }

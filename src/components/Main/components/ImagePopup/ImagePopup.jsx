@@ -9,6 +9,7 @@ export default function ImagePopup(props) {
           className="popup__close-button"
           type="button"
           onClick={onClose}
+          
         />
         <img src={link} alt={name} className="popup__image" />
     

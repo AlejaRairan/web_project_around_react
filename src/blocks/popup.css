@@ -8,6 +8,7 @@
 .popup__caption {
   font-size: 20px;
   font-weight: 800;
+  margin-top: 10px;
 }
 .popup__form {
   flex-direction: column;
@@ -112,7 +113,6 @@
   width: 100%;
 }
 
-
 .popup__close-button {
   position: absolute;
   top: -50px;
@@ -122,10 +122,6 @@
   border: none;
   color: white;
   cursor: pointer;
-}
-
-.popup__caption {
-  margin-top: 10px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {

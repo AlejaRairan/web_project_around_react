@@ -1,27 +1,43 @@
 import ImagePopup from "../ImagePopup/ImagePopup.jsx";
+import { useContext } from "react";
+import CurrentUserContext from "../../../../contexts/CurrentUserContext.jsx";
 
 export default function Card(props) {
-    const { name, link, isLiked, handleOpenPopup} = props.card;
-    const imageComponent = {title:"Vista de imagen", children: <ImagePopup card={props.card} onClose={handleOpenPopup}/>}
+  const { card, onCardLike, onCardDelete, onOpenPopup } = props;
+  const { name, link, isLiked } = card; 
+  
+ 
+
+  const imageComponent = {
+    title: "Vista de imagen",
+    children: <ImagePopup card={card} onClose={onOpenPopup} />,
+  };
+
+  const cardLikeButtonClassName = `card__like-button ${
+    isLiked ? "card__like-button_is-active" : ""
+  }`;
+
   return (
     <li className="card">
-      <img 
-      className="card__image" 
-      src={link} 
-      alt={name}
-      onClick={() => handleOpenPopup(imageComponent)}
-       />
+      <img
+        className="card__image"
+        src={link}
+        alt={name}
+        onClick={() => onOpenPopup("image", imageComponent)}
+      />
       <button
         aria-label="Delete card"
         className="card__delete-button"
         type="button"
+        onClick={() => onCardDelete(card._id)}
       />
       <div className="card__description">
         <h2 className="card__title">{name}</h2>
         <button
           aria-label="Like card"
           type="button"
-          className="card__like-button"
+          className={cardLikeButtonClassName}
+          onClick={() => onCardLike(card)}
         />
       </div>
     </li>
