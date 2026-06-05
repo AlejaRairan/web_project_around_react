@@ -5,8 +5,6 @@ import CurrentUserContext from "../../../../contexts/CurrentUserContext.js";
 export default function Card(props) {
   const { card, onCardLike, onCardDelete, onOpenPopup } = props;
   const { name, link, isLiked } = card; 
-  
- 
 
   const imageComponent = {
     title: "Vista de imagen",
