@@ -6,7 +6,7 @@ import avatar from "../../images/JacquesCousteau.png";
 import editIcon from "../../images/editicon.svg";
 import addIcon from "../../images/addicon.svg";
 import Card from "./components/Card/Card.jsx";
-import CurrentUserContext from "../../contexts/CurrentUserContext.jsx";
+import CurrentUserContext from "../../contexts/CurrentUserContext.js";
 import { api } from "../../utils/Api.jsx";
 import { useState, useEffect, useContext } from "react";
 
